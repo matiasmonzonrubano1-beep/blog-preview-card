@@ -18,22 +18,34 @@
       background-color:white;
       border-radius: 20px;
       padding:24px;
-      max-width: 384px;
-      width: 87%;
+      min-width: 327px;
+      width: 27%;
+      max-width:384px;
       min-height: 501px;
       height:54%;
+      box-shadow:10px,10px;
+    }
+    .illustration {
+      background-image: url("assets/images/illustration-article.svg");
+      border-radius:10px;
+      height:200px;
+      min-width: 279px;
+      width: 100%;
+
     }
     .flexcenter { 
       display:flex;
       justify-content: center;
       align-items: center;
       height:100vh;
+      width: 100%;
     }
   </style>
 </head>
 <body class="background">
   <div class="flexcenter">
     <div class="whitebox">
+      <div class="illustration"></div>
       Hola
     </div>
   </div>
