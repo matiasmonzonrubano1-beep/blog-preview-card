@@ -11,10 +11,16 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
     .background {
       background-color: hsl(47, 88%, 63%);
+    }
+    .flexcenter { 
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:100vh;
+      width: 100%;
+      font-family: "Figtree";
     }
     .whitebox { 
       background-color:white;
@@ -28,11 +34,6 @@
       box-shadow: 8px 8px;
       border: 1px solid black;
     }
-    .learningicon {
-      background-color:hsl(47, 88%, 63%);
-      font-size: 12px;
-      font-weight: 700;
-    }
     .illustration {
       background-image: url("assets/images/illustration-article.svg");
       border-radius:10px;
@@ -40,26 +41,80 @@
       min-width: 279px;
       width: 100%;
     }
-    .flexcenter { 
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      height:100vh;
-      width: 100%;
-      font-family: "Figtree";
+    .textbox {
+      min-width: 297px;
+      max-width: 336px;
+      width:27%;
+      padding-top:24px;
+      padding-bottom:16px;
+      line-height: 230%;
     }
-  </style>
+    .learningicon {
+      background-color:hsl(47, 88%, 63%);
+      font-size: calc(14px + 4 * ((50vw - 360px) / 680));
+      font-weight: 800;
+      width: fit-content;
+      height: fit-content;
+      display: inline-block;
+      border-left: 10px solid hsl(47, 88%, 63%);
+      border-right: 10px solid hsl(47, 88%, 63%);
+      text-align: center;
+      align-content: center;
+    }
+    .date {
+      font-size: calc(14px + 4 * ((50vw - 360px) / 680));
+      font-weight:500;
+    }
+    .title {
+      font-size: calc(20px + 4 * ((50vw - 360px) / 680));
+      font-weight:800;
+    }
+    .paragraph {
+      font-size: calc(16px + 4 * ((40vw - 360px) / 680));
+      font-weight:500;
+    }
+    .profilephoto {
+      height:36px;
+      width: 36px;
+      vertical-align:middle;
+      padding-right:8px
+    }
+    .nameandsurname {
+      font-size: medium;
+      font-weight:800;
+      align-self:center;
+    }
+    .bottom {
+      position:absolute;
+      top:95%;
+      left:50%;
+      transform:translate(-50%,50%)
+    }
+    .attribution { font-size: 14px; text-align: center; font-family: "Figtree"; font-weight: 700; }
+    .attribution a { color: hsl(244, 100%, 50%); }
+    </style>
 </head>
 <body class="background">
   <div class="flexcenter">
     <div class="whitebox">
       <div class="illustration"></div>
-      Hola
+      <div class="textbox">
+        <div class="learningicon">Learning</div>
+        <div class="date">Published 21 Dec 2023</div>
+        <div class="title">HTML & CSS foundations</div>
+        <div class="paragraph">These languages are the backbone of every website, defining structure, content, and presentation.</div>
+      </div>
+      <div class="nameandsurname">
+        <img src="assets/images/image-avatar.webp" width="32" class="profilephoto"></img>
+        Greg Hopper
+      </div>
     </div>
   </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/matiasmonzonrubano1-beep">Matias Monzon Rubano</a>.
+  <div class="bottom">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/matiasmonzonrubano1-beep">Matias Monzon Rubano</a>.
+    </div>
   </div>
 </body>
 </html>
